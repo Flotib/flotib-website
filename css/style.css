@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Morpheus";
+    src: url('../fonts/Morpheus.ttf') format('ttf');
+    src: url('../fonts/Morpheus.eot');
+    src: url('../fonts/Morpheus.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Morpheus.woff2') format('woff2'),
+        url('../fonts/Morpheus.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BlizQuadrata Web";
+    src: url('../fonts/BlizQuadrataWeb.ttf') format('ttf');
+    src: url('../fonts/BlizQuadrataWeb.eot');
+    src: url('../fonts/BlizQuadrataWeb.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BlizQuadrataWeb.woff2') format('woff2'),
+        url('../fonts/BlizQuadrataWeb.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: roboto;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    pointer-events: none;
+}
+
+html {
+    background-color: #242426;
+}
+
+#app {
+    border-top: 5em solid red;
+}
