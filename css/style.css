@@ -36,6 +36,9 @@ html {
     background-color: #242426;
 }
 
-#app {
-    border-top: 5em solid red;
+.headerblock {
+    background-color: red;
+    height: 500px;
+    min-width: 100%;
+    width: 100%;
 }
