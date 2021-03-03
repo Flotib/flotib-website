@@ -11,14 +11,44 @@
 
 <body>
     <div id="app">
+        <div id="navbar">
+            <div id="navBg"></div>
+            <a href="index.html" id="logo">CompanyLogo</a>
+            <div id="navbar-right">
+                <a href="#app">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
         <header>
             <div class="headerblock">
-            
+                <div class="background"></div>
             </div>
         </header>
+
+        <div style="height: 1200px;" id="contact">
+
+        </div>
     </div>
 
     <script>
+        document.getElementById('logo').setAttribute('draggable', false);
+        document.getElementById('logo').setAttribute('draggable', false);
+        document.getElementById('logo').setAttribute('draggable', false);
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {
+                document.getElementById("navbar").style.padding = "10px 35px";
+                document.getElementById("navBg").style.backgroundColor = "black";
+                document.getElementById("logo").style.fontSize = "25px";
+            } else {
+                document.getElementById("navbar").style.padding = "40px 10px";
+                document.getElementById("navBg").style.backgroundColor = "transparent";
+                document.getElementById("logo").style.fontSize = "35px";
+            }
+        }
+
         var app = new Vue({
             el: '#app',
             data: {
