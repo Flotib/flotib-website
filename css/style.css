@@ -49,7 +49,7 @@ html {
     user-select: none;
   }
   
-bar #navBg {
+#navbar #navBg {
     position: absolute;
     width: 100%;
     height: 100%;
