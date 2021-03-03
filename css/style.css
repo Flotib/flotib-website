@@ -39,17 +39,21 @@ html {
 }   
 
 #navbar {
+    margin: 0;
     overflow: hidden;
-    padding: 50px 10px; /* Large padding which will shrink on scroll (using JS) */
-    transition-duration: 300ms; /* Adds a transition effect when the padding is decreased */
-    position: fixed; /* Sticky/fixed navbar */
+    padding: 50px;
+    transition-duration: 300ms; 
+    position: fixed;
     width: 100%;
-    top: 0; /* At the top */
+    top: 0;
     z-index: 100;
     user-select: none;
-  }
+}
   
-#navbar #navBg {
+#navbar #navContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -85,7 +89,7 @@ html {
 }
 
 #navbar #navbar-right a:hover {
-    transform: scale(1.2);
+    transform: scale(1.14);
     text-shadow: 0px 1px 8px #ffffff80;
 }
 
@@ -93,7 +97,7 @@ html {
     color: #fff;
 }
 
-header .headerblock {
+.headerblock {
     height: 700px;
     min-width: 100%;
     width: 100%;
@@ -102,8 +106,8 @@ header .headerblock {
     overflow: hidden;
 }
 
-header .background {
-    position: absolute;
+.background {
+    position: relative;
     background-image: url("../img/header-bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -111,6 +115,30 @@ header .background {
     background-size: cover;
     overflow: hidden;
     width: 100%;
-    height: 800px;
+    height: 100%;
     z-index: -1;
+}
+
+.headerDivider {
+    display: block;
+    border: 0px;
+    height: 115px;
+    background-image:url('../img/divider2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 10;
+    margin: -55px;
+}
+
+.sectionDivider {
+    display: block;
+    border: 0px;
+    height: 57px;
+    background-image: url('../img/divider1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 10;
+    margin: -24px;
 }

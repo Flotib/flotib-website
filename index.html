@@ -12,23 +12,25 @@
 <body>
     <div id="app">
         <div id="navbar">
-            <div id="navBg"></div>
-            <a href="index.html" id="logo">CompanyLogo</a>
-            <div id="navbar-right">
-                <a href="#app">Home</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
-            </div>
+            <div id="navContent"></div>
+                <a href="index.html" id="logo">Flotib</a>
+                <div id="navbar-right">
+                    <a href="#app">Home</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            
         </div>
         <header>
             <div class="headerblock">
                 <div class="background"></div>
             </div>
         </header>
+        <hr class="headerDivider">
+        <section id="artwork">
 
-        <div style="height: 1200px;" id="contact">
-
-        </div>
+        </section>
+        <div style="height: 1500px;"></div>
     </div>
 
     <script>
@@ -39,12 +41,16 @@
 
         function scrollFunction() {
             if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {
-                document.getElementById("navbar").style.padding = "10px 35px";
-                document.getElementById("navBg").style.backgroundColor = "black";
+                document.getElementById("navbar").style.padding = "10px";
+                document.getElementById("navbar-right").style.marginRight = "18%";
+                document.getElementById("logo").style.marginLeft = "22%";
+                document.getElementById("navContent").style.backgroundColor = "black";
                 document.getElementById("logo").style.fontSize = "25px";
             } else {
-                document.getElementById("navbar").style.padding = "40px 10px";
-                document.getElementById("navBg").style.backgroundColor = "transparent";
+                document.getElementById("navbar").style.padding = "50px";
+                document.getElementById("navbar-right").style.marginRight = "15%";
+                document.getElementById("logo").style.marginLeft = "15%";
+                document.getElementById("navContent").style.backgroundColor = "transparent";
                 document.getElementById("logo").style.fontSize = "35px";
             }
         }
