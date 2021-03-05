@@ -56,9 +56,15 @@ html {
 section {
     display: flex;
     position: relative;
-    z-index: -1;
+    z-index: 0;
     height: 600px;
     width: 100%;
+    z-index: 0;
+}
+
+hr {
+    position: relative;
+    z-index: 1000;
 }
 
 #navbar {
@@ -168,5 +174,85 @@ section {
 }
 
 #artworkSection {
-    background-color: rgba(255, 0, 0, 0.164);
+    justify-content: center;
+    align-items: center;
+}
+
+#artworkSection .blurBackgroundSection {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/artwork/TheobaldAndAbigail.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(4px);
+    z-index: 0;
+}
+
+#artworkSection .boxcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    min-width: 500px;
+    z-index: 1;
+}
+
+.buttonwowlike {
+    font-family: BlizQuadrata Web;
+    overflow: hidden;
+    padding: 0px 40px 0px 40px;
+    width: auto;
+    height: 40px;
+    border: 3px groove #696969;
+    border-radius: 4px;
+    font-size: 23px;
+    color: #dfbd42;
+    background: linear-gradient(0deg, #390308 0%, #560107 28%, #640404 50%, #560107 72%, #390308 100%); 
+    margin: 3px 0px 3px 0px;
+    outline:none;
+}
+
+.buttonwowlike:hover {
+    border: 3px groove #999999;
+    background: linear-gradient(0deg, #49050d 0%, #6d060d 28%, #810404 50%, #6d060d 72%, #49050d 100%);
+    color: #fff;
+}
+
+.buttonwowlike:active {
+    transform: translateY(1px);
+    border: 3px groove #575757;
+    background: linear-gradient(0deg, #300408 0%, #490307 28%, #520606 50%, #490307 72%, #300408 100%);
+}
+
+.buttonwowlikeblue {
+    font-family: BlizQuadrata Web;
+    overflow: hidden;
+    padding: 0px 40px 0px 40px;
+    width: auto;
+    height: 40px;
+    border: 3px groove #696969;
+    border-radius: 4px;
+    font-size: 23px;
+    color: #dfbd42;
+    background: linear-gradient(0deg, rgba(14,28,54,1) 0%, rgba(25,79,130,1) 25%, rgba(23,84,141,1) 50%, rgba(25,79,130,1) 75%, rgba(14,28,54,1) 100%);
+    margin: 3px 0px 3px 0px;
+    outline:none;
+}
+
+.buttonwowlikeblue:hover {
+    border: 3px groove #999999;
+    background: linear-gradient(0deg, #49050d 0%, #6d060d 28%, #810404 50%, #6d060d 72%, #49050d 100%);
+    color: #fff;
+}
+
+.buttonwowlikeblue:active {
+    transform: translateY(1px);
+    border: 3px groove #575757;
+    background: linear-gradient(0deg, #300408 0%, #490307 28%, #520606 50%, #490307 72%, #300408 100%);
 }
