@@ -240,19 +240,19 @@ hr {
     border-radius: 4px;
     font-size: 23px;
     color: #dfbd42;
-    background: linear-gradient(0deg, rgba(14,28,54,1) 0%, rgba(25,79,130,1) 25%, rgba(23,84,141,1) 50%, rgba(25,79,130,1) 75%, rgba(14,28,54,1) 100%);
+    background: linear-gradient(0deg, #0e1c36 0%, #194f82 25%, #17548d 50%, #194f82 75%, #0e1c36 100%);
     margin: 3px 0px 3px 0px;
     outline:none;
 }
 
 .buttonwowlikeblue:hover {
     border: 3px groove #999999;
-    background: linear-gradient(0deg, #49050d 0%, #6d060d 28%, #810404 50%, #6d060d 72%, #49050d 100%);
+    background: linear-gradient(0deg, #14284d 0%, #1c5890 22%, #195c9a 50%, #194f82 78%, #14284d 100%);
     color: #fff;
 }
 
 .buttonwowlikeblue:active {
     transform: translateY(1px);
     border: 3px groove #575757;
-    background: linear-gradient(0deg, #300408 0%, #490307 28%, #520606 50%, #490307 72%, #300408 100%);
+    background: linear-gradient(0deg, #0c172b 0%, #163f66 22%, #144673 50%, #163f66 78%, #0c172b 100%);
 }
