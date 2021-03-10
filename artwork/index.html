@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Flotib.com</title>
-    <link rel="icon" href="img/pageicon.png" />
-    <link rel="stylesheet" href="css/style.css">
+    <title>Flotib's Artwork</title>
+    <link rel="icon" href="..img/pageicon.png" />
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 
@@ -16,38 +16,18 @@
             <div id="navContent"></div>
                 <a href="index.html" id="logo">Flotib</a>
                 <div id="navbar-right">
-                    <a href="#app">Home</a>
-                    <a href="#artworkanchor">Artwork</a>
+                    <a href="../index.html">Home</a>
+                    <a href="#contact">Contact</a>
                     <a href="#contact">Contact</a>
                 </div>
         </div>
-
-        <header>
-            <div class="headerblock">
-                <div class="background"></div>
-            </div>
-        </header>
-
-        <hr class="headerDivider" id="artworkanchor">
-
-        <section id="artworkSection">
-            <div class="boxcontent">
-                <p>LOREM IPSUM</p>
-                <button class="buttonwowblue" style="height: 55px;" onclick="location.href='artwork/index.html';">View my gallery</button>
-            </div>
-            <div class="blurBackgroundSection" style="animation: changeArtworkSectionBg linear 40s infinite;"></div>
-        </section>
-
-        <hr class="sectionDivider">
-
-        <section>
-
-        </section>
 
         <div style="height: 1500px;"></div>
     </div>
 
     <script>
+        document.getElementById('logo').setAttribute('draggable', false);
+        document.getElementById('logo').setAttribute('draggable', false);
         document.getElementById('logo').setAttribute('draggable', false);
         window.onscroll = function () { scrollFunction() };
 

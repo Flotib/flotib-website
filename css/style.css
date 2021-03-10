@@ -213,8 +213,10 @@ hr {
 }
 
 #artworkSection .boxcontent p {
+    padding: 15px;
+    margin: 10px;
     color: #f0f0f0;
-    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    text-shadow: 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000;
 }
 
 .buttonwowlike {
@@ -255,11 +257,11 @@ hr {
     border: 2px solid #1a2e63;
     box-shadow: 0px 5px 10px 0px #00000085;
     font-size: 23px;
-    color: #dfbd42;
+    color: #f1c421;
     background: radial-gradient(circle, #0e5394 0%, #0f367e 100%);
     margin: 3px 0px 3px 0px;
     outline:none;
-    transition-duration: 60ms;
+    transition-duration: 80ms;
 }
 
 .buttonwowblue:hover {
@@ -274,4 +276,20 @@ hr {
     border: 1px solid #f0f0f0;
     background: radial-gradient(circle, #1060ac 0%, #113b8a 100%);
     color: #fff;
+}
+
+.gallery {
+    display: flex;
+    position: absolute;
+    width: 1500px;
+    height: 100%;
+    background-color: cornflowerblue;
+}
+
+.imageFrame {
+    display: flex;
+    position: relative;
+    height: 350px;
+    width: 200px;
+    background-color: blueviolet;
 }
