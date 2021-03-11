@@ -262,6 +262,7 @@ hr {
     margin: 3px 0px 3px 0px;
     outline:none;
     transition-duration: 0s;
+    cursor: pointer;
 }
 
 .buttonwowblue:hover {
