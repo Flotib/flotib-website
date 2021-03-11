@@ -291,6 +291,7 @@ hr {
     width: 100%;
     height: auto;
     z-index: 1;
+    padding: 50px;
 }
 
 .imageFrame {
@@ -298,19 +299,21 @@ hr {
     position: relative;
     height: 220px;
     width: 350px;
-    margin: 50px;
+    margin: 10px;
     background-size: cover;
     background-repeat: no-repeat;
-    transition-duration: 250ms;
-    border: 1px solid #fff;
+    transition-duration: 150ms;
+    box-shadow: 0px 0px 10px 0px #000000;
+    border: 1px solid #e3e3e3;
     outline: 1px solid transparent;
     cursor: pointer;
     z-index: 2;
 }
 
 .imageFrame:hover {
-    box-shadow: 0px 0px 20px 0px #62a1ffc7;
-    transform: scale(1.15);
+    box-shadow: 0px 0px 15px 0px #3d8bff;
+    transform: scale(1.05);
+    filter: brightness(120%);
 }
 
 .bigImageOverlay {
@@ -328,7 +331,7 @@ hr {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: #00000080;
+    background-color: #000000bf;
     z-index: 1;
 }
 
@@ -346,6 +349,7 @@ hr {
 .bigImageOverlay .bigImageFrame img {
     height: 100%;
     width: auto;
+    pointer-events: all;
 }
 
 @media (orientation: portrait) {
@@ -367,5 +371,24 @@ hr {
         max-height: 100%;
         width: auto;
         max-width: 100%;
+        pointer-events: all;
     }
+}
+
+.imageFrame .artworkName {
+    visibility: hidden;
+    position: fixed;
+    padding: 8px 0px 8px 0px;
+    word-spacing: 5px;
+    font-family: Morpheus;
+    font-size: 21px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    background-color: #000000bd;
+    bottom: 0;
+}
+
+.imageFrame:hover .artworkName {
+    visibility: visible;
 }

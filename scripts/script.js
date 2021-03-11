@@ -25,26 +25,26 @@ var app = new Vue({
         galleryImage: [
             'Cathedral',
             'Jil',
-            'TheobaldAndAbigail',
-            'TheobaldAndAbigail2',
+            'Theobald_and_Abigail',
+            'Theobald_and_Abigail_landscape',
             'Kyrian',
             'Faelya',
             'William',
             'Veckiuss',
             'Kamelia',
             'Ashtinn',
-            'Ashtinn2',
+            'Ashtinn_second_pose',
             'Amorvia',
             'James',
             'Anathelle',
             'Faelenaria',
-            'Faelenaria2',
+            'Faelenaria_face',
             'Shaflow',
-            'KnightHollow',
-            'Faelya2',
+            'Knight_Hollow',
+            'Faelya_the_Night_Fae',
             'Elune',
             'Mercenaries',
-            'Mercenaries2',
+            'Mercenaries_the_Witch',
         ],
         selectedImage: null,
     },
@@ -70,6 +70,10 @@ var app = new Vue({
             }
         },
 
+        strReplace(myStr) {
+            let newStr = myStr.replace(/_/g, " ");
+            return newStr
+        },
     },
 
     mounted() {
