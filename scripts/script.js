@@ -1,6 +1,4 @@
 document.getElementById('logo').setAttribute('draggable', false);
-document.getElementById('logo').setAttribute('draggable', false);
-document.getElementById('logo').setAttribute('draggable', false);
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
@@ -48,6 +46,7 @@ var app = new Vue({
             'Mercenaries',
             'Mercenaries2',
         ],
+        selectedImage: null,
     },
 
     computed: {
@@ -59,12 +58,15 @@ var app = new Vue({
             img = new Image()
             img.src = '../img/artwork/' + imgname + '.jpg'
 
-            if (img.naturalWidth > img.naturalHeight) {
-                return false
-            } else if (img.naturalWidth < img.naturalHeight) {
-                return true
-            } else {
-                return false
+            img.onload = function () {
+
+                if (img.naturalWidth > img.naturalHeight) {
+                    return false
+                } else if (img.naturalWidth < img.naturalHeight) {
+                    return true
+                } else {
+                    return false
+                }
             }
         },
 

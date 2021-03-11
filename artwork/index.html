@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Flotib's Artwork</title>
-    <link rel="icon" href="..img/pageicon.png" />
+    <link rel="icon" href="../img/pageicon.png" />
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
@@ -14,18 +14,23 @@
 
         <div id="navbar">
             <div id="navContent"></div>
-            <a href="index.html" id="logo">Flotib</a>
+            <a href="../index.html" id="logo">Flotib</a>
             <div id="navbar-right">
                 <a href="../index.html">Home</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
             </div>
         </div>
 
         <div class="gallery">
             <div v-for="(image,artwork) in galleryImage.length" :key="artwork" class="imageFrame"
                 v-bind:style="imageOrientation(galleryImage[galleryImage.length-1-artwork]) ? 'background-position: center center;' : 'background-position: center 25%;'"
-                :style="'background-image: url(../img/artwork/preview/'+galleryImage[galleryImage.length-1-artwork]+'.jpg)'">
+                :style="'background-image: url(../img/artwork/preview/'+galleryImage[galleryImage.length-1-artwork]+'.jpg)'" @click="selectedImage=(galleryImage.length-1-artwork)">
+            </div>
+        </div>
+
+        <div class="bigImageOverlay" v-if="selectedImage!=null">
+            <div class="bigImageOverlay-bg" @click="selectedImage=null"></div>
+            <div class="bigImageFrame">
+                <img :src="'../img/artwork/'+galleryImage[selectedImage]+'.jpg'">
             </div>
         </div>
 

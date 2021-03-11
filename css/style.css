@@ -290,6 +290,7 @@ hr {
     margin-top: 300px;
     width: 100%;
     height: auto;
+    z-index: 1;
 }
 
 .imageFrame {
@@ -303,9 +304,68 @@ hr {
     transition-duration: 250ms;
     border: 1px solid #fff;
     outline: 1px solid transparent;
+    cursor: pointer;
+    z-index: 2;
 }
 
 .imageFrame:hover {
     box-shadow: 0px 0px 20px 0px #62a1ffc7;
     transform: scale(1.15);
+}
+
+.bigImageOverlay {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+}
+
+.bigImageOverlay .bigImageOverlay-bg {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #00000080;
+    z-index: 1;
+}
+
+.bigImageOverlay .bigImageFrame {
+    position: relative;
+    width: auto;
+    height: 90%;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 100px 0px #0e5394;
+    z-index: 10;
+    overflow: hidden;
+    user-select: none;
+}
+
+.bigImageOverlay .bigImageFrame img {
+    height: 100%;
+    width: auto;
+}
+
+@media (orientation: portrait) {
+    .bigImageOverlay .bigImageFrame {
+        position: relative;
+        width: auto;
+        max-width: 90%;
+        height: auto;
+        max-height: 90%;
+        border: 1px solid #fff;
+        box-shadow: 0px 0px 100px 0px #0e5394;
+        z-index: 10;
+        overflow: hidden;
+        user-select: none;
+    }
+    
+    .bigImageOverlay .bigImageFrame img {
+        height: auto;
+        max-height: 100%;
+        width: auto;
+        max-width: 100%;
+    }
 }
