@@ -25,7 +25,7 @@
         <div class="gallery">
             <div v-for="(image,artwork) in galleryImage.length" :key="artwork" class="imageFrame"
                 v-bind:style="imageOrientation(galleryImage[galleryImage.length-1-artwork]) ? 'background-position: center center;' : 'background-position: center 25%;'"
-                :style="'background-image: url(../img/artwork/preview   /'+galleryImage[galleryImage.length-1-artwork]+'.jpg)'">
+                :style="'background-image: url(../img/artwork/preview/'+galleryImage[galleryImage.length-1-artwork]+'.jpg)'">
             </div>
         </div>
 

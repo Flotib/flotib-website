@@ -297,7 +297,6 @@ hr {
     height: 220px;
     width: 350px;
     margin: 50px;
-    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     transition-duration: 250ms;
