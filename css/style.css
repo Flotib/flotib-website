@@ -283,19 +283,29 @@ hr {
 .gallery {
     display: flex;
     position: absolute;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     margin-top: 300px;
     width: 100%;
     height: auto;
-    background-color: cornflowerblue;
 }
 
 .imageFrame {
     display: flex;
     position: relative;
-    height: 200px;
+    height: 220px;
     width: 350px;
     margin: 50px;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition-duration: 250ms;
+    border: 1px solid #fff;
+    outline: 1px solid transparent;
+}
+
+.imageFrame:hover {
+    box-shadow: 0px 0px 20px 0px #62a1ffc7;
+    transform: scale(1.15);
 }

@@ -14,16 +14,17 @@
 
         <div id="navbar">
             <div id="navContent"></div>
-                <a href="index.html" id="logo">Flotib</a>
-                <div id="navbar-right">
-                    <a href="../index.html">Home</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#contact">Contact</a>
-                </div>
+            <a href="index.html" id="logo">Flotib</a>
+            <div id="navbar-right">
+                <a href="../index.html">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
 
         <div class="gallery">
-            <div v-for="(image,artwork) in galleryImage.length" :key="artwork" class="imageFrame" :style="'background-image: url(../img/artwork/'+galleryImage[artwork]+'.jpg)'"></div>
+            <div v-for="(image,artwork) in galleryImage.length" :key="artwork" class="imageFrame"
+                :style="'background-image: url(../img/artwork/'+galleryImage[galleryImage.length-1-artwork]+'.jpg)'" @click="imageOrientation(galleryImage[galleryImage.length-1-artwork])"></div>
         </div>
 
         <div style="height: 1500px;"></div>
@@ -57,9 +58,28 @@
             el: '#app',
             data: {
                 galleryImage: [
-                    'Elune',
+                    'Cathedral',
+                    'Jil',
+                    'TheobaldAndAbigail',
+                    'TheobaldAndAbigail2',
+                    'Kyrian',
+                    'William',
+                    'Veckiuss',
+                    'Kamelia',
+                    'Ashtinn',
+                    'Ashtinn2',
+                    'Amorvia',
                     'Faelya',
-                    'TheobaldAndAbigail'
+                    'James',
+                    'Anathelle',
+                    'Faelenaria',
+                    'Faelenaria2',
+                    'Shaflow',
+                    'KnightHollow',
+                    'Faelya2',
+                    'Elune',
+                    'Mercenaries',
+                    'Mercenaries2',
                 ],
             },
 
@@ -68,6 +88,14 @@
             },
 
             methods: {
+                imageOrientation(imgname) {
+                    let orientation
+                    let src = '../img/artwork/'+imgname+'.jpg'
+                    img = new Image()
+                    img.src = src
+
+                    console.log(img.naturalWidth)
+                }
 
             },
 
