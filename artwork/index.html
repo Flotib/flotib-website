@@ -22,6 +22,10 @@
                 </div>
         </div>
 
+        <div class="gallery">
+            <div v-for="(image,artwork) in galleryImage.length" :key="artwork" class="imageFrame" :style="'background-image: url(../img/artwork/'+galleryImage[artwork]+'.jpg)'"></div>
+        </div>
+
         <div style="height: 1500px;"></div>
     </div>
 
@@ -52,7 +56,11 @@
         var app = new Vue({
             el: '#app',
             data: {
-
+                galleryImage: [
+                    'Elune',
+                    'Faelya',
+                    'TheobaldAndAbigail'
+                ],
             },
 
             computed: {

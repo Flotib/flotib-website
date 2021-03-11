@@ -261,7 +261,7 @@ hr {
     background: radial-gradient(circle, #0e5394 0%, #0f367e 100%);
     margin: 3px 0px 3px 0px;
     outline:none;
-    transition-duration: 80ms;
+    transition-duration: 0s;
 }
 
 .buttonwowblue:hover {
@@ -269,6 +269,7 @@ hr {
     border: 1px solid #f0f0f0;
     background: radial-gradient(circle, #116abd 0%, #12439e 100%);
     color: #fff;
+    transition-duration: 200ms;
 }
 
 .buttonwowblue:active {
@@ -276,20 +277,25 @@ hr {
     border: 1px solid #f0f0f0;
     background: radial-gradient(circle, #1060ac 0%, #113b8a 100%);
     color: #fff;
+    transition-duration: 0s;
 }
 
 .gallery {
     display: flex;
     position: absolute;
-    width: 1500px;
-    height: 100%;
+    margin-top: 300px;
+    width: 100%;
+    height: auto;
     background-color: cornflowerblue;
 }
 
 .imageFrame {
     display: flex;
     position: relative;
-    height: 350px;
-    width: 200px;
-    background-color: blueviolet;
+    height: 200px;
+    width: 350px;
+    margin: 50px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
