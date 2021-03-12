@@ -1,22 +1,38 @@
 document.getElementById('logo').setAttribute('draggable', false);
 window.onscroll = function () { scrollFunction() };
+window.onorientationchange = function () { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 160 || document.documentElement.scrollTop > 160) {
         document.getElementById("navbar").style.textShadow = "0px 0px 0px transparent";
-        document.getElementById("navbar").style.padding = "10px";
-        document.getElementById("navbar-right").style.marginRight = "18%";
-        document.getElementById("logo").style.marginLeft = "22%";
-        document.getElementById("navContent").style.backgroundColor = "black";
-        document.getElementById("logo").style.fontSize = "25px";
+        document.getElementById("navBackground").style.backgroundColor = "black";
+        if(screen.availHeight > screen.availWidth) {
+            document.getElementById("logo").style.fontSize = "60px";
+            document.getElementById("navbar").style.height = "220px";
+            document.getElementById("navbar-right").style.marginRight = "180px";
+            document.getElementById("logo").style.marginLeft = "180px";
+        } else {
+            document.getElementById("logo").style.fontSize = "25px";
+            document.getElementById("navbar").style.height = "80px";
+            document.getElementById("navbar-right").style.marginRight = "350px";
+            document.getElementById("logo").style.marginLeft = "350px";
+        }
         document.getElementById("headerbackground").style.filter = "blur(3px)";
     } else {
         document.getElementById("navbar").style.textShadow = "0px 0px 9px #9dbfffde";
-        document.getElementById("navbar").style.padding = "50px";
-        document.getElementById("navbar-right").style.marginRight = "15%";
-        document.getElementById("logo").style.marginLeft = "15%";
-        document.getElementById("navContent").style.backgroundColor = "transparent";
-        document.getElementById("logo").style.fontSize = "35px";
+        
+        document.getElementById("navBackground").style.backgroundColor = "transparent";
+        if(screen.availHeight > screen.availWidth) {
+            document.getElementById("logo").style.fontSize = "55px";
+            document.getElementById("navbar").style.height = "180px";
+            document.getElementById("navbar-right").style.marginRight = "120px";
+            document.getElementById("logo").style.marginLeft = "120px";
+        } else {
+            document.getElementById("logo").style.fontSize = "35px";
+            document.getElementById("navbar").style.height = "150px";
+            document.getElementById("navbar-right").style.marginRight = "250px";
+            document.getElementById("logo").style.marginLeft = "250px";
+        }
         document.getElementById("headerbackground").style.filter = "blur(0px)";
     }
 }

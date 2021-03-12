@@ -68,22 +68,24 @@ hr {
 }
 
 #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0;
     overflow: hidden;
-    padding: 50px;
     transition-duration: 300ms; 
     position: fixed;
     width: 100%;
+    height: 160px;
+    box-sizing: border-box;
     top: 0;
     z-index: 100;
     user-select: none;
     text-shadow: 0px 0px 9px #9dbfffde;
 }
   
-#navbar #navContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#navbar #navBackground {
+    display: block;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -108,13 +110,14 @@ hr {
     font-size: 35px;
     font-weight: bold;
     transition-duration: 300ms;
-    margin-left: 15%;
+    margin-left: 250px;
+    overflow: hidden;
 }
 
 #navbar-right {
     overflow: hidden;
     float: right;
-    margin-right: 15%;
+    margin-right: 250px;
     transition-duration: 200ms;
 }
 
@@ -352,7 +355,68 @@ hr {
     pointer-events: all;
 }
 
+.imageFrame .artworkName {
+    visibility: hidden;
+    position: fixed;
+    padding: 8px 0px 8px 0px;
+    word-spacing: 5px;
+    font-family: Morpheus;
+    font-size: 21px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    background-color: #000000bd;
+    bottom: 0;
+}
+
+.imageFrame:hover .artworkName {
+    visibility: visible;
+}
+
 @media (orientation: portrait) {
+    #navbar {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        overflow: hidden;
+        transition-duration: 300ms; 
+        position: fixed;
+        width: 100%;
+        height: 180px;
+        box-sizing: border-box;
+        top: 0;
+        z-index: 100;
+        user-select: none;
+        text-shadow: 0px 0px 9px #9dbfffde;
+    }
+
+    #navbar a {
+        float: left;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 34px;
+        line-height: 25px;
+        border-radius: 4px;
+        transition-duration: 200ms;
+    }
+    
+    #navbar #logo {
+        font-size: 55px;
+        font-weight: bold;
+        transition-duration: 300ms;
+        margin-left: 120px;
+        overflow: hidden;
+    }
+
+    #navbar-right {
+        overflow: hidden;
+        float: right;
+        margin-right: 120px;
+        transition-duration: 200ms;
+    }
+
     .bigImageOverlay .bigImageFrame {
         position: relative;
         width: auto;
@@ -373,22 +437,4 @@ hr {
         max-width: 100%;
         pointer-events: all;
     }
-}
-
-.imageFrame .artworkName {
-    visibility: hidden;
-    position: fixed;
-    padding: 8px 0px 8px 0px;
-    word-spacing: 5px;
-    font-family: Morpheus;
-    font-size: 21px;
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    background-color: #000000bd;
-    bottom: 0;
-}
-
-.imageFrame:hover .artworkName {
-    visibility: visible;
 }
