@@ -2,13 +2,14 @@ document.getElementById('logo').setAttribute('draggable', false);
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {
+    if (document.body.scrollTop > 160 || document.documentElement.scrollTop > 160) {
         document.getElementById("navbar").style.textShadow = "0px 0px 0px transparent";
         document.getElementById("navbar").style.padding = "10px";
         document.getElementById("navbar-right").style.marginRight = "18%";
         document.getElementById("logo").style.marginLeft = "22%";
         document.getElementById("navContent").style.backgroundColor = "black";
         document.getElementById("logo").style.fontSize = "25px";
+        document.getElementById("headerbackground").style.filter = "blur(3px)";
     } else {
         document.getElementById("navbar").style.textShadow = "0px 0px 9px #9dbfffde";
         document.getElementById("navbar").style.padding = "50px";
@@ -16,6 +17,7 @@ function scrollFunction() {
         document.getElementById("logo").style.marginLeft = "15%";
         document.getElementById("navContent").style.backgroundColor = "transparent";
         document.getElementById("logo").style.fontSize = "35px";
+        document.getElementById("headerbackground").style.filter = "blur(0px)";
     }
 }
 

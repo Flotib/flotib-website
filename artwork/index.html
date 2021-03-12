@@ -28,8 +28,8 @@
             </div>
         </div>
 
-        <div class="bigImageOverlay" v-if="selectedImage!=null">
-            <div class="bigImageOverlay-bg" @click="selectedImage=null"></div>
+        <div class="bigImageOverlay" v-if="selectedImage!=null" @click="selectedImage=null">
+            <div class="bigImageOverlay-bg"></div>
             <div class="bigImageFrame">
                 <img :src="'../img/artwork/'+galleryImage[selectedImage]+'.jpg'">
             </div>
