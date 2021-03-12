@@ -6,7 +6,7 @@ function scrollFunction() {
     if (document.body.scrollTop > 160 || document.documentElement.scrollTop > 160) {
         document.getElementById("navbar").style.textShadow = "0px 0px 0px transparent";
         document.getElementById("navBackground").style.backgroundColor = "black";
-        if(screen.availHeight > screen.availWidth) {
+        if (screen.availHeight > screen.availWidth) {
             document.getElementById("logo").style.fontSize = "60px";
             document.getElementById("navbar").style.height = "220px";
             document.getElementById("navbar-right").style.marginRight = "180px";
@@ -14,15 +14,17 @@ function scrollFunction() {
         } else {
             document.getElementById("logo").style.fontSize = "25px";
             document.getElementById("navbar").style.height = "80px";
-            document.getElementById("navbar-right").style.marginRight = "350px";
-            document.getElementById("logo").style.marginLeft = "350px";
+            document.getElementById("navbar-right").style.marginRight = "18%";
+            document.getElementById("logo").style.marginLeft = "18%";
         }
-        document.getElementById("headerbackground").style.filter = "blur(3px)";
+        if (document.getElementById("headerbackground")!=null) {
+            document.getElementById("headerbackground").style.filter = "blur(3px)";
+        }
     } else {
         document.getElementById("navbar").style.textShadow = "0px 0px 9px #9dbfffde";
         
         document.getElementById("navBackground").style.backgroundColor = "transparent";
-        if(screen.availHeight > screen.availWidth) {
+        if (screen.availHeight > screen.availWidth) {
             document.getElementById("logo").style.fontSize = "55px";
             document.getElementById("navbar").style.height = "180px";
             document.getElementById("navbar-right").style.marginRight = "120px";
@@ -33,7 +35,9 @@ function scrollFunction() {
             document.getElementById("navbar-right").style.marginRight = "250px";
             document.getElementById("logo").style.marginLeft = "250px";
         }
-        document.getElementById("headerbackground").style.filter = "blur(0px)";
+        if (document.getElementById("headerbackground")!=null) {
+            document.getElementById("headerbackground").style.filter = "blur(0px)";
+        }
     }
 }
 
