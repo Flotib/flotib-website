@@ -92,7 +92,7 @@ var app = new Vue({
             }
         },
 
-        strReplace(myStr) {
+        strArtNameReplace(myStr) {
             let newStr = myStr.replace(/_/g, " ");
             return newStr
         },
