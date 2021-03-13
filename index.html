@@ -14,17 +14,20 @@
 
         <div id="navbar">
             <div id="navBackground"></div>
-                <a href="index.html" id="logo">Flotib</a>
-                <div id="navbar-right">
-                    <a href="#app">Home</a>
-                    <a href="#artworkanchor">Artwork</a>
-                    <a href="#contact">Contact</a>
-                </div>
+            <a href="index.html" id="logo">Flotib</a>
+            <div id="navbar-right">
+                <a onclick="smoothScroll('app');">Home</a>
+                <a onclick="smoothScroll('artworkanchor');">Artwork</a>
+                <a onclick="smoothScroll('contact');">Contact</a>
+            </div>
         </div>
 
         <header>
             <div class="headerblock">
-                <div id="headerbackground"></div>
+                <div id="headerbackground" style="background-image: url('img/header/header-bg.jpg');"></div>
+                <span class="headertext" style="text-shadow: 0px 0px 6px #0039b3, 0px 0px 6px #000, 0px 0px 12px #00000080;">
+                    <p>Welcome to my website</p>
+                </span>
             </div>
         </header>
 
@@ -34,9 +37,12 @@
             <div class="boxcontent">
                 <span class="sectionDescription">
                     <p class="title">LOREM IPSUM</p>
-                    <p>Dolor sit amet, consectetur adipiscing elit. Nullam quis est quam. Morbi at pharetra ante, sed posuere quam. Nunc lacinia convallis felis nec dapibus. Cras suscipit massa eget aliquet semper.</p>
+                    <p>Dolor sit amet, consectetur adipiscing elit. Nullam quis est quam. Morbi at pharetra ante, sed
+                        posuere quam. Nunc lacinia convallis felis nec dapibus. Cras suscipit massa eget aliquet semper.
+                    </p>
                 </span>
-                <button class="buttonwowblue" style="height: 55px;" onclick="location.href='artwork/index.html';">View my gallery</button>
+                <button class="buttonwowblue" style="height: 55px;" onclick="location.href='artwork/index.html';">View
+                    my gallery</button>
             </div>
             <div class="blurBackgroundSection" style="animation: changeArtworkSectionBg linear 40s infinite;"></div>
         </section>

@@ -20,6 +20,17 @@
             </div>
         </div>
 
+        <header>
+            <div class="headerblocksmol">
+                <div id="headerbackground" style="background-image: url('../img/header/header-bg-artwork.jpg');"></div>
+                <span class="headertext">
+                    <p>Artwork</p>
+                </span>
+            </div>
+        </header>
+
+        <hr class="headerDivider" id="artworkanchor">
+
         <div class="gallery">
             <div v-for="(image,artwork) in galleryImage.length" :key="artwork" class="imageFrame"
                 v-bind:style="imageOrientation(galleryImage[galleryImage.length-1-artwork]) ? 'background-position: center center;' : 'background-position: center 25%;'"
