@@ -20,6 +20,13 @@
             </div>
         </div>
 
+        <div class="bigImageOverlay" v-if="selectedImage!=null" @click="selectedImage=null">
+            <div class="bigImageOverlay-bg"></div>
+            <div class="bigImageFrame">
+                <img :src="'../img/artwork/'+galleryImage[selectedImage]+'.jpg'">
+            </div>
+        </div>
+
         <header>
             <div class="headerblocksmol">
                 <div id="headerbackground" style="background-image: url('../img/header/header-bg-artwork.jpg');"></div>
@@ -38,14 +45,7 @@
                 <span class="artworkName">{{strArtNameReplace(galleryImage[galleryImage.length-1-artwork])}}</span>
             </div>
         </div>
-
-        <div class="bigImageOverlay" v-if="selectedImage!=null" @click="selectedImage=null">
-            <div class="bigImageOverlay-bg"></div>
-            <div class="bigImageFrame">
-                <img :src="'../img/artwork/'+galleryImage[selectedImage]+'.jpg'">
-            </div>
-        </div>
-
+        
         <div style="height: 1500px;"></div>
     </div>
 
