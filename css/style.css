@@ -120,11 +120,18 @@ hr {
     font-size: 35px;
     font-weight: bold;
     transition-duration: 300ms;
+    padding-right: 100px;
+    margin-right: 100px;
     margin-left: 250px;
     overflow: hidden;
 }
 
 #navbar-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     float: right;
     margin-right: 250px;
@@ -138,6 +145,39 @@ hr {
 
 #navbar #navbar-right a:active {
     color: #fff;
+}
+
+#navbar-right-mobile {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar-right-mobile a:hover {
+    transform: scale(1.14);
+    text-shadow: 0px 1px 8px #ffffff80;
+}
+
+#navbar-right-mobile a:active {
+    color: #fff;
+}
+
+#navbutton {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+#navmenubutton {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .headerblock {
@@ -515,7 +555,7 @@ hr {
         text-align: center;
         padding: 12px;
         text-decoration: none;
-        font-size: 34px;
+        font-size: 50px;
         line-height: 25px;
         border-radius: 4px;
         transition-duration: 200ms;
@@ -530,10 +570,92 @@ hr {
     }
 
     #navbar-right {
-        overflow: hidden;
-        float: right;
-        margin-right: 120px;
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbar-right-mobile {
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 70%;
+        height: 100%;
+        background-color: #000000e5;
         transition-duration: 200ms;
+        z-index: 50;
+        right: 0;
+        transform: translateX(100%);
+    }
+
+    #navbar-right-mobile a {
+        float: left;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 68px;
+        line-height: 25px;
+        border-radius: 4px;
+        transition-duration: 200ms;
+        margin: 80px;
+        overflow: hidden;
+    }
+
+    #navbutton {
+        opacity: 0;
+        display: block;
+        position: fixed;
+        visibility: visible;
+        width: 120px;
+        height: 120px;
+        right: 0;
+        margin-top: 50px;
+        margin-right: 70px;
+        transition-duration: 250ms;
+        z-index: 100;
+        pointer-events: all;
+    }
+
+    #navbutton:checked ~ #navbar-right-mobile {
+        transform: translateX(0);
+    }
+
+    #navbutton:checked ~ #navmenubutton span {
+        background-color: #9b9b9b;
+    }
+
+    #navmenubutton {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        visibility: visible;
+        width: 120px;
+        height: 120px;
+        right: 0;
+        margin-top: 50px;
+        margin-right: 70px;
+        transition-duration: 250ms;
+        z-index: 100;
+        background-color: transparent;
+        pointer-events: none;
+    }
+
+    #navmenubutton span {
+        background-color: #fff;
+        border-radius: 5px;
+        width: 90px;
+        height: 10px;
+        margin: 8px 0px 8px 0px;
+        transition-duration: 150ms;
     }
 
     .headerblocksmol {

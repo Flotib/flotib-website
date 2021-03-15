@@ -1,6 +1,7 @@
 document.getElementById('logo').setAttribute('draggable', false);
 window.onscroll = function () { scrollFunction() };
 window.onorientationchange = function () { scrollFunction() };
+window.onresize = function () { scrollFunction() }; 
 
 function currentYPosition() {
     if (self.pageYOffset) return self.pageYOffset;
@@ -54,8 +55,10 @@ function scrollFunction() {
         if (screen.availHeight > screen.availWidth) {
             document.getElementById("logo").style.fontSize = "60px";
             document.getElementById("navbar").style.height = "220px";
-            document.getElementById("navbar-right").style.marginRight = "180px";
+            //document.getElementById("navbar-right").style.marginRight = "180px";
             document.getElementById("logo").style.marginLeft = "180px";
+            document.getElementById("navbutton").style.marginRight = "110px";
+            document.getElementById("navmenubutton").style.marginRight = "110px";
         } else {
             document.getElementById("logo").style.fontSize = "25px";
             document.getElementById("navbar").style.height = "80px";
@@ -72,8 +75,10 @@ function scrollFunction() {
         if (screen.availHeight > screen.availWidth) {
             document.getElementById("logo").style.fontSize = "55px";
             document.getElementById("navbar").style.height = "180px";
-            document.getElementById("navbar-right").style.marginRight = "120px";
+            //document.getElementById("navbar-right").style.marginRight = "120px";
             document.getElementById("logo").style.marginLeft = "120px";
+            document.getElementById("navbutton").style.marginRight = "70px";
+            document.getElementById("navmenubutton").style.marginRight = "70px";
         } else {
             document.getElementById("logo").style.fontSize = "35px";
             document.getElementById("navbar").style.height = "160px";
