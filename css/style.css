@@ -147,6 +147,14 @@ hr {
     color: #fff;
 }
 
+#mobilenav {
+    visibility: hidden;
+    max-height: 0px;
+    max-width: 0px;
+    margin: 0;
+    padding: 0;
+}
+
 #navbar-right-mobile {
     visibility: hidden;
     width: 0px;
@@ -577,6 +585,12 @@ hr {
         padding: 0;
     }
 
+    #mobilenav {
+        visibility: visible;
+        width: auto;
+        height: auto;
+    }
+
     #navbar-right-mobile {
         visibility: visible;
         display: flex;
@@ -606,6 +620,15 @@ hr {
         transition-duration: 200ms;
         margin: 80px;
         overflow: hidden;
+    }
+
+    #navbar-right-mobile a:hover {
+        transform: scale(1.14);
+        text-shadow: 0px 1px 8px #ffffff80;
+    }
+    
+    #navbar-right-mobile a:active {
+        color: #fff;
     }
 
     #navbutton {
