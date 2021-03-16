@@ -241,6 +241,7 @@ hr {
     position: absolute;
     color: #fff;
     font-size: 70px;
+    user-select: none;
 }
 
 .headerblock .headertext p {
@@ -255,6 +256,7 @@ hr {
     position: absolute;
     color: #fff;
     font-size: 70px;
+    user-select: none;
 }
 
 .headerblocksmol .headertext p {

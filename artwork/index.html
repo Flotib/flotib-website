@@ -56,11 +56,12 @@
         <div class="gallery">
             <div v-for="(image,artwork) in galleryImage.length" :key="artwork" class="imageFrame"
                 v-bind:style="imageOrientation(galleryImage[galleryImage.length-1-artwork]) ? 'background-position: center center;' : 'background-position: center 25%;'"
-                :style="'background-image: url(../img/artwork/preview/'+galleryImage[galleryImage.length-1-artwork]+'.jpg)'" @click="selectedImage=(galleryImage.length-1-artwork)">
+                :style="'background-image: url(../img/artwork/preview/'+galleryImage[galleryImage.length-1-artwork]+'.jpg)'"
+                @click="selectedImage=(galleryImage.length-1-artwork)">
                 <span class="artworkName">{{strArtNameReplace(galleryImage[galleryImage.length-1-artwork])}}</span>
             </div>
         </div>
-        
+
         <div class="commissionredirection">
             <p>Dolor sit amet, consectetur adipiscing elit. Nullam quis est quam. Morbi at pharetra ante, sed
                 posuere quam. Nunc lacinia convallis felis nec dapibus. Cras suscipit massa eget aliquet semper.</p>
