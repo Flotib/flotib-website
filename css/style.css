@@ -465,6 +465,32 @@ hr {
     filter: brightness(120%);
 }
 
+.fadeImage-enter-active, .fadeImage-leave-active {
+    transition: opacity 160ms;
+}
+
+.fadeImage-enter, .fadeImage-leave-to {
+    opacity: 0;
+}
+
+.showImage {
+    transition: 280ms;
+}
+
+
+.showImage .bigImageFrame {
+    animation: grow 280ms;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .bigImageOverlay {
     display: flex;
     position: fixed;

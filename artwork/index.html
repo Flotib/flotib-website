@@ -33,12 +33,14 @@
             </div>
         </div>
 
-        <div class="bigImageOverlay" v-if="selectedImage!=null" @click="selectedImage=null">
-            <div class="bigImageOverlay-bg"></div>
-            <div class="bigImageFrame">
-                <img :src="'../img/artwork/'+galleryImage[selectedImage]+'.jpg'">
+        <transition name="fadeImage" enter-active-class="showImage">
+            <div class="bigImageOverlay" v-if="selectedImage!=null" @click="selectedImage=null">
+                <div class="bigImageOverlay-bg"></div>
+                <div class="bigImageFrame">
+                    <img :src="'../img/artwork/'+galleryImage[selectedImage]+'.jpg'">
+                </div>
             </div>
-        </div>
+        </transition>
 
         <header>
             <div class="headerblocksmol">
