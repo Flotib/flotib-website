@@ -1,7 +1,7 @@
 document.getElementById('logo').setAttribute('draggable', false);
 window.onscroll = function () { scrollFunction() };
 window.onorientationchange = function () { scrollFunction() };
-window.onresize = function () { scrollFunction() }; 
+window.onresize = function () { scrollFunction() };
 
 function currentYPosition() {
     if (self.pageYOffset) return self.pageYOffset;
@@ -95,29 +95,122 @@ var app = new Vue({
     el: '#app',
     data: {
         galleryImage: [
-            'Cathedral',
-            'Jil',
-            'Theobald_and_Abigail',
-            'Theobald_and_Abigail_landscape',
-            'Kyrian',
-            'Faelya',
-            'William',
-            'Veckiuss',
-            'Kamelia',
-            'Ashtinn',
-            'Ashtinn_second_pose',
-            'Amorvia',
-            'James',
-            'Anathelle',
-            'Faelenaria',
-            'Faelenaria_face',
-            'Shaflow',
-            'Knight_Hollow',
-            'Faelya_the_Night_Fae',
-            'Elune',
-            'Mercenaries',
-            'Mercenaries_-_The_Witch',
-            'Flotib_studying',
+            {
+                name: 'Flotib',
+                realname: 'Flotib studying',
+                commission: false,
+            },
+            {
+                name: 'MercenariesWitch',
+                realname: 'Mercenaries - The Witch',
+                commission: false,
+            },
+            {
+                name: 'Mercenaries',
+                realname: 'Mercenaries',
+                commission: false,
+            },
+            {
+                name: 'Elune',
+                realname: 'Elune',
+                commission: false,
+            },
+            {
+                name: 'Faelya2',
+                realname: 'Faelya the Night Fae',
+                commission: false,
+            },
+            {
+                name: 'KnightHollow',
+                realname: 'Knight Hollow',
+                commission: false,
+            },
+            {
+                name: 'Shaflow',
+                realname: 'Shaflow',
+                commission: false,
+            },
+            {
+                name: 'FaelenariaFace',
+                realname: 'Faelenaria face',
+                commission: false,
+            },
+            {
+                name: 'Faelenaria',
+                realname: 'Faelenaria',
+                commission: false,
+            },
+            {
+                name: 'Anathelle',
+                realname: 'Anathelle',
+                commission: false,
+            },
+            {
+                name: 'James',
+                realname: 'James',
+                commission: true,
+            },
+            {
+                name: 'Amorvia',
+                realname: 'Amorvia',
+                commission: true,
+            },
+            {
+                name: 'Ashtinn2',
+                realname: 'Ashtinn warships battle',
+                commission: true,
+            },
+            {
+                name: 'Ashtinn',
+                realname: 'Ashtinn',
+                commission: true,
+            },
+
+            {
+                name: 'Kamelia',
+                realname: 'Kamelia',
+                commission: true,
+            },
+            {
+                name: 'Veckiuss',
+                realname: 'Veckiuss',
+                commission: true,
+            },
+            {
+                name: 'William',
+                realname: 'William',
+                commission: true,
+            },
+            {
+                name: 'Faelya',
+                realname: 'Faelya',
+                commission: false,
+            },
+            {
+                name: 'Kyrian',
+                realname: 'Kyrian',
+                commission: false,
+            },
+            {
+                name: 'TheobaldAbigailLandscape',
+                realname: 'Theobald and Abigail (landscape)',
+                commission: true,
+            },
+            {
+                name: 'Theobald_and_Abigail',
+                realname: 'Theobald and Abigail',
+                commission: true,
+            },
+            {
+                name: 'Jil',
+                realname: 'Jil the Paladin',
+                commission: true,
+            },
+            {
+                name: 'Cathedral',
+                realname: 'Paladin Cathedral',
+                commission: false,
+            },
         ],
         selectedImage: null,
     },
@@ -143,10 +236,11 @@ var app = new Vue({
             }
         },
 
+        /* ---REWORKED---
         strArtNameReplace(myStr) {
             let newStr = myStr.replace(/_/g, " ");
             return newStr
-        },
+        },*/
     },
 
     mounted() {
