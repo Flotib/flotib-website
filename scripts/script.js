@@ -213,6 +213,7 @@ var app = new Vue({
             },
         ],
         selectedImage: null,
+        navOpen: false,
         showCopyright: false,
     },
 
