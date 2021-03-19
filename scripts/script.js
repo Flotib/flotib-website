@@ -213,6 +213,7 @@ var app = new Vue({
             },
         ],
         selectedImage: null,
+        showCopyright: false,
     },
 
     computed: {

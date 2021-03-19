@@ -611,6 +611,90 @@ hr {
     }
 }
 
+.artworkTopText {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #f3f3f3;
+    font-weight: 300;
+    padding: 30px 0 30px 0;
+    overflow: hidden;
+}
+
+.artworkTopText span {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: auto;
+    padding: 25px;
+}
+
+.textslide-enter-active {
+    animation: slidedown 2s ease-in-out;
+}
+
+.textslide-leave-active {
+    animation: slidedown 2s ease-in-out reverse;
+}
+
+@keyframes slidedown {
+    0% {
+        height: 0px;
+        padding: 0;
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        height: auto;
+        padding: 25px;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.artworkTopText .fakeCommissionImage {
+    display: flex;
+    position: relative;
+    height: 220px;
+    width: 350px;
+    margin: 20px 0 30px 0;
+    transition-duration: 150ms;
+    box-shadow: 0px 0px 10px 0px #000000;
+    border: 1px solid #e3e3e3;
+    outline: 1px solid transparent;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+    overflow: hidden;
+}
+
+.artworkTopText .fakeCommissionImage .commissionIndicator {
+    cursor: auto;
+    opacity: 1;
+    animation: showBounce 3000ms infinite ease-in-out;
+    box-shadow: 0px 0px 3px 3px red;
+}
+
+@keyframes showBounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.8) translateX(12px) translateY(12px);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 @media (orientation: portrait) {
     #navbar {

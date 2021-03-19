@@ -53,7 +53,29 @@
 
         <hr class="headerDivider">
 
-        <p style="font-size: 22px; color: #f03636; margin-top: 100px; text-align: center;">*todo:Warn about rights*</p>
+        <div class="artworkTopText">
+            <transition name="textslide">
+                <span v-if="showCopyright">
+                    <p>
+                        You can download and use any
+                        of the following images for personal purpose only, however if they are used publicly you must
+                        credit me
+                        somewhere. Be careful with the commissions. These are indicated with the following icon on their
+                        preview.
+                    </p>
+                    <div class="fakeCommissionImage">
+                        <div class="commissionIndicator"></div>
+                    </div>
+                    <p>
+                        If the image you want to use is a commission, first ask permission from the person to whom the
+                        character
+                        belongs. If they agree to you using the render
+                        they paid for, you'll need to credit that person and myself.
+                    </p>
+                </span>
+            </transition>
+            <button class="buttonwowlike" @click="showCopyright=!showCopyright">Copyright</button>
+        </div>
 
         <div class="gallery">
             <div v-for="(image,artwork) in galleryImage" :key="artwork" class="imageFrame"
