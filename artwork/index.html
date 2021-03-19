@@ -56,6 +56,7 @@
         <div class="artworkTopText">
             <transition name="textslide">
                 <span v-if="showCopyright">
+                    <div class="flexbox">
                     <p>
                         You can download and use any
                         of the following images for personal purpose only, however if they are used publicly you must
@@ -72,6 +73,7 @@
                         belongs. If they agree to you using the render
                         they paid for, you'll need to credit that person and myself.
                     </p>
+                </div>
                 </span>
             </transition>
             <button class="buttonwowlike" @click="showCopyright=!showCopyright">Copyright</button>

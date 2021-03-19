@@ -636,8 +636,20 @@ hr {
     justify-content: center;
     align-items: center;
     width: 40%;
-    height: auto;
+    height: 450px;
     padding: 25px;
+}
+
+.artworkTopText span .flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.artworkTopText span .flexbox p {
+    overflow: hidden;
 }
 
 .textslide-enter-active {
@@ -655,8 +667,11 @@ hr {
         opacity: 0;
         transform: translateY(-100px);
     }
+    45%{
+        opacity: 0;
+    }
     100% {
-        height: auto;
+        height: 450px;
         padding: 25px;
         opacity: 1;
         transform: translateY(0px);
@@ -668,6 +683,8 @@ hr {
     position: relative;
     height: 220px;
     width: 350px;
+    min-height: 220px;
+    min-width: 350px;
     margin: 20px 0 30px 0;
     transition-duration: 150ms;
     box-shadow: 0px 0px 10px 0px #000000;
