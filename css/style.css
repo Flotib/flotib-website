@@ -44,6 +44,10 @@
     background-color: #fff;
 }
 
+button {
+    user-select: none;
+}
+
 input,
 textarea,
 button,
@@ -636,7 +640,7 @@ hr {
     justify-content: center;
     align-items: center;
     width: 40%;
-    height: 450px;
+    height: 500px;
     padding: 25px;
 }
 
@@ -650,6 +654,8 @@ hr {
 
 .artworkTopText span .flexbox p {
     overflow: hidden;
+    width: 100%;
+    height: auto;
 }
 
 .textslide-enter-active {
@@ -671,7 +677,7 @@ hr {
         opacity: 0;
     }
     100% {
-        height: 450px;
+        height: 500px;
         padding: 25px;
         opacity: 1;
         transform: translateY(0px);
@@ -891,6 +897,14 @@ hr {
         margin-bottom: 20px;
     }
 
+    .buttonwowlike {
+        transform: scale(1.8);
+    }
+
+    .buttonwowlike:active {
+        transform: translateY(1px) scale(1.764);
+    }
+
     .buttonwowblue {
         transform: scale(1.8);
     }
@@ -928,5 +942,43 @@ hr {
     .commissionredirection p {
         font-size: 20px;
         width: 80%;
+    }
+
+    .artworkTopText {
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    .artworkTopText .fakeCommissionImage {
+        margin: 30px 0 45px 0;
+    }
+
+    .artworkTopText span {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 65%;
+        height: 900px;
+        padding: 25px;
+    }
+
+    @keyframes slidedown {
+        0% {
+            height: 0px;
+            padding: 0;
+            opacity: 0;
+            transform: translateY(-600px);
+        }
+        45%{
+            opacity: 0;
+        }
+        100% {
+            height: 900px;
+            padding: 25px;
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
 }
