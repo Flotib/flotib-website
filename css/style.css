@@ -490,7 +490,7 @@ hr {
     animation: grow 280ms;
 }
 
-.showImage .slides {
+.showImage .bigImageSlides {
     animation: grow 280ms;
 }
 
@@ -1016,14 +1016,14 @@ hr {
         pointer-events: all;
     }
 
-    .slides > div {
+    .bigImageSlides > div {
         width: auto;
         max-width: 90%;
         height: auto !important;
         max-height: 90%;
     }
     
-    .slides > div img {
+    .bigImageSlides > div img {
         height: auto;
         max-height: 100%;
         width: auto;
