@@ -36,10 +36,25 @@
         </div>
 
         <transition name="fadeImage" enter-active-class="showImage">
-            <div class="bigImageOverlay" v-if="selectedImage!=null" @click="selectedImage=null">
-                <div class="bigImageOverlay-bg"></div>
-                <div class="bigImageFrame">
-                    <img :src="'../img/artwork/'+selectedImage+'.jpg'">
+            <div class="bigImageOverlay" v-if="selectedImage!=null">
+                <div class="bigImageOverlay-bg" @click="selectedImage=null"></div>
+                <div v-if="selectedImage.album!=null" style="position: fixed; color:blue; z-index: 100;">
+                    <a @click="scrollToId('img0')">1</a>
+                    <a v-for="(subimage,artwork) in selectedImage.album" @click="scrollToId('img'+(artwork+1))">{{artwork+2}}</a>
+                </div>
+
+                <div v-if="selectedImage.album==null" class="bigImageFrame" @click="selectedImage=null">
+                    <img :src="'../img/artwork/'+selectedImage.name+'.jpg'">
+                </div>
+                
+                <div v-else class="bigImageSlides" @click="selectedImage=null">
+                    <div>
+                        <img :src="'../img/artwork/'+selectedImage.name+'.jpg'" id="img0">
+                    </div>
+                    <div v-for="(subimage,artwork) in selectedImage.album">
+                        <img :src="'../img/artwork/'+subimage.name+'.jpg'" :id="'img'+(artwork+1)">
+                    </div>
+                    <div style="margin-left: -50%; visibility: hidden;"></div>
                 </div>
             </div>
         </transition>
@@ -79,12 +94,12 @@
         </div>
 
         <div class="gallery">
-            <div v-for="(image,artwork) in galleryImage" :key="artwork" class="imageFrame"
-                @click="selectedImage=image.name">
+            <div v-for="(image,artwork) in galleryImage" :key="artwork" class="imageFrame" @click="selectedImage=image">
                 <div class="imageFrame-bg"
                     v-bind:style="imageOrientation(image.name) ? 'background-position: center center;' : 'background-position: center 25%;'"
                     :style="'background-image: url(../img/artwork/preview/'+image.name+'.jpg)'"></div>
                 <div v-if="image.commission" class="commissionIndicator"></div>
+                <div v-if="image.album!=null" class="albumNumberIndicator">{{image.album.length+1}}</div>
                 <span class="artworkName">{{image.realname}}</span>
             </div>
         </div>

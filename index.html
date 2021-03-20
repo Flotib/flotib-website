@@ -16,9 +16,9 @@
             <div id="navBackground"></div>
             <a href="index.html" id="logo">Flotib</a>
             <div id="navbar-right">
-                <a onclick="smoothScroll('app');">Home</a>
-                <a onclick="smoothScroll('artworkanchor');">Artwork</a>
-                <a onclick="smoothScroll('commissionanchor');">Commission</a>
+                <a @click="scrollToId('app')">Home</a>
+                <a @click="scrollToId('artworkanchor')">Artwork</a>
+                <a @click="scrollToId('commissionSection')">Commission</a>
             </div>
         </div>
         <div id="mobilenav">
@@ -30,7 +30,7 @@
             <div v-if="navOpen" id="closemenuarea" @click="navOpen=false"></div>
             <transition name="fade">
                 <div id="navbar-right-mobile" v-if="navOpen">
-                    <a onclick="smoothScroll('app');">Home</a>
+                    <a @click="scrollToId('app')">Home</a>
                     <a href="artwork/index.html">Artwork</a>
                     <a href="commission/index.html">Commission</a>
                 </div>

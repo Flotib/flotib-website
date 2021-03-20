@@ -3,51 +3,6 @@ window.onscroll = function () { scrollFunction() };
 window.onorientationchange = function () { scrollFunction() };
 window.onresize = function () { scrollFunction() };
 
-function currentYPosition() {
-    if (self.pageYOffset) return self.pageYOffset;
-    if (document.documentElement && document.documentElement.scrollTop)
-        return document.documentElement.scrollTop;
-    if (document.body.scrollTop) return document.body.scrollTop;
-    return 0;
-}
-
-
-function elmYPosition(eID) {
-    var elm = document.getElementById(eID);
-    var y = elm.offsetTop;
-    var node = elm;
-    while (node.offsetParent && node.offsetParent != document.body) {
-        node = node.offsetParent;
-        y += node.offsetTop;
-    } return y;
-}
-
-
-function smoothScroll(eID) {
-    var startY = currentYPosition();
-    var stopY = elmYPosition(eID);
-    var distance = stopY > startY ? stopY - startY : startY - stopY;
-    if (distance < 100) {
-        scrollTo(0, stopY); return;
-    }
-    var speed = Math.round(distance / 100);
-    if (speed >= 20) speed = 20;
-    var step = Math.round(distance / 25);
-    var leapY = stopY > startY ? startY + step : startY - step;
-    var timer = 0;
-    if (stopY > startY) {
-        for (var i = startY; i < stopY; i += step) {
-            setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
-            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-        } return;
-    }
-    for (var i = startY; i > stopY; i -= step) {
-        setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
-        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
-    }
-    return false;
-}
-
 function scrollFunction() {
     if (document.body.scrollTop > 160 || document.documentElement.scrollTop > 160) {
         document.getElementById("navbar").style.textShadow = "0px 0px 0px transparent";
@@ -57,7 +12,6 @@ function scrollFunction() {
             document.getElementById("navbar").style.height = "220px";
             //document.getElementById("navbar-right").style.marginRight = "180px";
             document.getElementById("logo").style.marginLeft = "180px";
-            document.getElementById("navbutton").style.marginRight = "110px";
             document.getElementById("navmenubutton").style.marginRight = "110px";
         } else {
             document.getElementById("logo").style.fontSize = "25px";
@@ -77,7 +31,6 @@ function scrollFunction() {
             document.getElementById("navbar").style.height = "180px";
             //document.getElementById("navbar-right").style.marginRight = "120px";
             document.getElementById("logo").style.marginLeft = "120px";
-            document.getElementById("navbutton").style.marginRight = "70px";
             document.getElementById("navmenubutton").style.marginRight = "70px";
         } else {
             document.getElementById("logo").style.fontSize = "35px";
@@ -132,8 +85,20 @@ var app = new Vue({
             },
             {
                 name: 'FaelenariaFace',
-                realname: 'Faelenaria face',
+                realname: 'Faelenaria',
                 commission: false,
+                album: [
+                    {
+                        name: 'Elune',
+                        realname: 'Elune',
+                        commission: false,
+                    },
+                    {
+                        name: 'Faelenaria',
+                        realname: 'Faelenaria looks at her reflection',
+                        commission: false,
+                    },
+                ],
             },
             {
                 name: 'Faelenaria',
@@ -237,6 +202,10 @@ var app = new Vue({
                 }
             }
         },
+
+        scrollToId(id) {
+            document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+        }
 
         /* ---REWORKED---
         strArtNameReplace(myStr) {
