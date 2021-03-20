@@ -54,14 +54,16 @@ var app = new Vue({
                 commission: false,
             },
             {
-                name: 'MercenariesWitch',
-                realname: 'Mercenaries - The Witch',
-                commission: false,
-            },
-            {
                 name: 'Mercenaries',
                 realname: 'Mercenaries',
                 commission: false,
+                album: [
+                    {
+                        name: 'MercenariesWitch',
+                        realname: 'Mercenaries - The Witch',
+                        commission: false,
+                    },
+                ],
             },
             {
                 name: 'Elune',
@@ -89,21 +91,11 @@ var app = new Vue({
                 commission: false,
                 album: [
                     {
-                        name: 'Elune',
-                        realname: 'Elune',
-                        commission: false,
-                    },
-                    {
                         name: 'Faelenaria',
                         realname: 'Faelenaria looks at her reflection',
                         commission: false,
                     },
                 ],
-            },
-            {
-                name: 'Faelenaria',
-                realname: 'Faelenaria',
-                commission: false,
             },
             {
                 name: 'Anathelle',
@@ -122,15 +114,16 @@ var app = new Vue({
             },
             {
                 name: 'Ashtinn2',
-                realname: 'Ashtinn warships battle',
-                commission: true,
-            },
-            {
-                name: 'Ashtinn',
                 realname: 'Ashtinn',
                 commission: true,
+                album: [
+                    {
+                        name: 'Ashtinn',
+                        realname: 'Ashtinn',
+                        commission: true,
+                    },
+                ],
             },
-
             {
                 name: 'Kamelia',
                 realname: 'Kamelia',
@@ -157,14 +150,16 @@ var app = new Vue({
                 commission: false,
             },
             {
-                name: 'TheobaldAbigailLandscape',
-                realname: 'Theobald and Abigail (landscape)',
-                commission: true,
-            },
-            {
                 name: 'Theobald_and_Abigail',
                 realname: 'Theobald and Abigail',
                 commission: true,
+                album: [
+                    {
+                        name: 'TheobaldAbigailLandscape',
+                        realname: 'Theobald and Abigail (landscape)',
+                        commission: true,
+                    },
+                ],
             },
             {
                 name: 'Jil',

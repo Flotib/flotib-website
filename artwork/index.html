@@ -38,15 +38,16 @@
         <transition name="fadeImage" enter-active-class="showImage">
             <div class="bigImageOverlay" v-if="selectedImage!=null">
                 <div class="bigImageOverlay-bg" @click="selectedImage=null"></div>
-                <div v-if="selectedImage.album!=null" style="position: fixed; color:blue; z-index: 100;">
-                    <a @click="scrollToId('img0')">1</a>
-                    <a v-for="(subimage,artwork) in selectedImage.album" @click="scrollToId('img'+(artwork+1))">{{artwork+2}}</a>
+                <div v-if="selectedImage.album!=null" class="imageSlidesSelector">
+                    <a @click="scrollToId('img0')"
+                        :style="'background-image: url(../img/artwork/preview/'+selectedImage.name+'.jpg)'">1</a>
+                    <a v-for="(subimage,artwork) in selectedImage.album"
+                        :style="'background-image: url(../img/artwork/preview/'+subimage.name+'.jpg)'"
+                        @click="scrollToId('img'+(artwork+1))">{{artwork+2}}</a>
                 </div>
-
                 <div v-if="selectedImage.album==null" class="bigImageFrame" @click="selectedImage=null">
                     <img :src="'../img/artwork/'+selectedImage.name+'.jpg'">
                 </div>
-                
                 <div v-else class="bigImageSlides" @click="selectedImage=null">
                     <div>
                         <img :src="'../img/artwork/'+selectedImage.name+'.jpg'" id="img0">
