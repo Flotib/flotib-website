@@ -808,6 +808,7 @@ hr {
     opacity: 0.4;
     transition-delay: 1600ms;
     transition-duration: 800ms; 
+    user-select: none;
 }
 
 .imageSlidesSelector:hover {
@@ -918,6 +919,7 @@ hr {
         transition-duration: 200ms;
         margin: 80px;
         overflow: hidden;
+        user-select: none;
     }
 
     #navbar-right-mobile a:hover {
@@ -1134,6 +1136,7 @@ hr {
 
     .imageSlidesSelector {
         opacity: 1;
+        user-select: none;
     }
 
     .imageSlidesSelector a {
@@ -1142,5 +1145,6 @@ hr {
         font-size: 46px;
         text-shadow: 0px 0px 12px #000, 0px 0px 12px #000, 0px 0px 12px #000;
         margin: 20px;
+        user-select: none;
     }
 }
