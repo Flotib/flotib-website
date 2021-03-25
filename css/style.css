@@ -888,8 +888,9 @@ hr {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(../img/section/commissionpage/1.jpg);
+    background-image: url('../img/section/commissionpage/1.jpg');
     background-position: center;
+    background-size: cover;
     z-index: -2;
 }
 
@@ -951,18 +952,18 @@ hr {
 
 #commissionconditions .flexbox .pic {
     width: 300px;
-    height: 100%;
+    height: 300px;
     padding: 20px;
     background-image: url('../img/elements/smallimg/conditions.png');
     background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
     image-rendering: pixelated;
     transition-duration: 400ms;
+    transform: scale(1.1);
 }
 
 #commissionconditions .flexbox .pic:hover {
-    transform: scale(1.04);
+    transform: scale(1.15);
 }
 
 @media (orientation: portrait) {
