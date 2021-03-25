@@ -951,11 +951,12 @@ hr {
 
 #commissionconditions .flexbox .pic {
     width: 300px;
-    height: 300px;
+    height: 100%;
     padding: 20px;
     background-image: url('../img/elements/smallimg/conditions.png');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     image-rendering: pixelated;
     transition-duration: 400ms;
 }
