@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Morpheus";
-    src: url('../fonts/Morpheus.ttf') format('ttf');
+    src: url('../fonts/Morpheus.ttf') format('truetype');
     src: url('../fonts/Morpheus.eot');
     src: url('../fonts/Morpheus.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Morpheus.woff2') format('woff2'),
@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: "BlizQuadrata Web";
-    src: url('../fonts/BlizQuadrataWeb.ttf') format('ttf');
+    src: url('../fonts/BlizQuadrataWeb.ttf') format('truetype');
     src: url('../fonts/BlizQuadrataWeb.eot');
     src: url('../fonts/BlizQuadrataWeb.eot?#iefix') format('embedded-opentype'),
         url('../fonts/BlizQuadrataWeb.woff2') format('woff2'),
@@ -967,6 +967,11 @@ hr {
 }
 
 @media (orientation: portrait) {
+    html {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
     #navbar {
         display: flex;
         align-items: center;
@@ -1277,5 +1282,55 @@ hr {
     .commissionHeader {
         background-image: url('../img/header/header-bg-commission-mobile.jpg');
         background-position: bottom;
+    }
+    
+
+    .commissionHeadTitle {
+        font-size: 50px;
+    }
+    
+    .commissionHeadTitle .subtitle {
+        font-size: 34px;
+    }
+
+    #commissionconditions .backgroundoverlay {
+        background: linear-gradient(90deg, transparent 0%, transparent 100%);
+    }
+    
+    #commissionconditions .title p {
+        font-size: 48px;
+    }
+    
+    #commissionconditions .flexbox {
+        margin-top: 80px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    
+    #commissionconditions .flexbox .text {
+        width: auto;
+        max-width: 65%;
+        height: auto;
+        font-size: 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #0000007f;
+        box-shadow: 0 0 10px 10px #0000007f;
+        outline: 1px solid transparent;
+    }
+    
+    #commissionconditions .flexbox .text p {
+        padding-bottom: 30px;
+    }
+
+    #commissionconditions .flexbox .text p:last-child {
+        padding-bottom: 0px;
+    }
+
+    #commissionconditions .flexbox .pic {
+        width: 400px;
+        height: 400px;
+        user-select: none;
     }
 }
