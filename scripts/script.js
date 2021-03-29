@@ -49,6 +49,23 @@ var app = new Vue({
     data: {
         galleryImage: [
             {
+                name: 'AnalisseAyden',
+                realname: 'Adventurers vs Kobolds',
+                commission: true,
+                album: [
+                    {
+                        name: 'Analisse',
+                        realname: 'Analisse',
+                        commission: true,
+                    },
+                    {
+                        name: 'Ayden',
+                        realname: 'Ayden',
+                        commission: false,
+                    },
+                ],
+            },
+            {
                 name: 'FlotibPainting',
                 realname: 'Flotib painting an elf',
                 commission: false,
