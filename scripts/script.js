@@ -49,6 +49,18 @@ var app = new Vue({
     data: {
         galleryImage: [
             {
+                name: 'Erelisse',
+                realname: 'Erélisse',
+                commission: false,
+                album: [
+                    {
+                        name: 'ErelisseNaked',
+                        realname: 'Erélisse - mirror nightmare',
+                        commission: false,
+                    },
+                ],
+            },
+            {
                 name: 'AnalisseAyden',
                 realname: 'Adventurers vs Kobolds',
                 commission: true,
