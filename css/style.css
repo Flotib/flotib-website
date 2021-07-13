@@ -135,10 +135,10 @@ hr {
 #navbar-right {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible;
     float: right;
     margin-right: 250px;
     transition-duration: 200ms;
@@ -836,9 +836,10 @@ hr {
     background-size: cover;
     cursor: pointer;
     user-select: none;
+    transition-duration: 180ms;
 }
 
-.imageSlidesSelector a:hover, a:active  {
+.imageSlidesSelector a:hover, .imageSlidesSelector a:active  {
     transform: scale(1.15);
 }
 
