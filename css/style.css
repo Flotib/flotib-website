@@ -359,7 +359,7 @@ hr {
 
 .sectionDescription .title {
     font-family: Blizquadrata Web;
-    font-size: 28px;
+    font-size: 48px;
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
@@ -1151,13 +1151,13 @@ hr {
     }
 
     .sectionDescription {
-        width: 70%;
+        width: 90%;
         margin: 10px 10px 12% 10px;
         font-size: 34px;
     }
     
     .sectionDescription .title {
-        font-size: 50px;
+        font-size: 82px;
         margin-bottom: 20px;
     }
 
