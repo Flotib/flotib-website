@@ -1068,8 +1068,19 @@ hr {
         background-color: #fff;
     }
 
+    #mobilenav .menuactived span:first-child {
+        background-color: #fff;
+        transform: rotate(-45deg);
+    }
+
     #mobilenav .menuactived span {
-        background-color: #9b9b9b;
+        background-color: #fff;
+        margin-top: -16px;
+        transform: rotate(45deg);
+    }
+
+    #mobilenav .menuactived span:last-child {
+        opacity: 0;
     }
 
     #closemenuarea {
@@ -1113,6 +1124,7 @@ hr {
         z-index: 100;
         background-color: transparent;
         pointer-events: all;
+        overflow: visible;
     }
 
     #navmenubutton span {
