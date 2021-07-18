@@ -1387,7 +1387,7 @@ hr {
     
 
     .commissionHeadTitle {
-        font-size: 50px;
+        font-size: 64px;
     }
     
     .commissionHeadTitle .subtitle {
@@ -1398,12 +1398,16 @@ hr {
         background: linear-gradient(90deg, transparent 0%, transparent 100%);
     }
     
+    #commissionconditions .title {
+        margin-bottom: 60px;
+    }
+
     #commissionconditions .title p {
-        font-size: 48px;
+        font-size: 62px;
     }
     
     #commissionconditions .flexbox {
-        margin-top: 80px;
+        margin-top: 100px;
         flex-direction: column-reverse;
         justify-content: center;
     }
@@ -1439,11 +1443,11 @@ hr {
     }
     
     #commissionwhatineed .title p {
-        font-size: 48px;
+        font-size: 62px;
     }
     
     #commissionwhatineed .flexbox {
-        margin-top: 80px;
+        margin: 100px 0 20px 0;
         flex-direction: column-reverse;
         justify-content: center;
     }
