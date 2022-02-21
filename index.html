@@ -15,7 +15,7 @@
 
         <div id="navbar">
             <div id="navBackground"></div>
-            <a href="index.html" id="logo">Flotib</a>
+            <a href="/" id="logo">Flotib</a>
             <div id="navbar-right">
                 <a @click="scrollToId('app')">Home</a>
                 <a @click="scrollToId('artworkanchor')">Artwork</a>
@@ -32,8 +32,8 @@
             <transition name="fade">
                 <div id="navbar-right-mobile" v-if="navOpen">
                     <a @click="scrollToId('app')">Home</a>
-                    <a href="artwork/index.html">Artwork</a>
-                    <a href="commission/index.html">Commission</a>
+                    <a href="artwork/">Artwork</a>
+                    <a href="commission/">Commission</a>
                 </div>
             </transition>
         </div>
@@ -58,7 +58,7 @@
                         all of my warcraft artwork. My very first creations are not here because, obviously, they don't
                         look very good.</p>
                 </span>
-                <button class="buttonwowblue" style="height: 55px;" onclick="location.href='artwork/index.html';">View
+                <button class="buttonwowblue" style="height: 55px;" onclick="location.href='artwork/';">View
                     my gallery</button>
             </div>
             <div class="blurBackgroundSection" style="animation: changeArtworkSectionBg linear 40s infinite;"></div>
@@ -75,7 +75,7 @@
                     </p>
                 </span>
                 <button class="buttonwowblue" style="height: 55px;"
-                    onclick="location.href='commission/index.html';">Commission</button>
+                    onclick="location.href='commission/';">Commission</button>
             </div>
             <div class="blurBackgroundSection" style="background-image: url(img/section/commission1.jpg);"></div>
         </section>
