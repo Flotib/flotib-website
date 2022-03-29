@@ -49,6 +49,11 @@ var app = new Vue({
     data: {
         galleryImage: [
             {
+                name: 'EsauAndHisMask',
+                realname: 'Two sides of Esau',
+                commission: true,
+            },
+            {
                 name: 'Elyzara',
                 realname: 'Elyzara',
                 commission: false,
